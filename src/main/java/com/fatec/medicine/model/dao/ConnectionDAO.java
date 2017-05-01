@@ -14,6 +14,10 @@ abstract class ConnectionDAO {
         this.connection = connection;
     }
     
+    protected void setString(int position, String value) throws SQLException {
+        statement.setString(position, value);
+    }
+    
     protected void populateGetByIdQueryStatement(Long id) throws SQLException {
         statement.setLong(1, id);
     }
@@ -26,7 +30,7 @@ abstract class ConnectionDAO {
         resultSet = statement.executeQuery();
     }
 
-    protected void executeStatement() {
+    protected void executeStatement() throws SQLException {
         statement.execute();
     }
     
