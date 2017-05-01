@@ -1,12 +1,9 @@
 package com.fatec.medicine.model.bean;
 
-import java.util.Calendar;
-
 public class Patient {
     private Long id;
     private String name;
     private String cpf;
-    private Calendar birthDate;
     private double weight;
     private double height;
 
@@ -14,13 +11,11 @@ public class Patient {
 
     public Patient(
             String name, 
-            String cpf, 
-            Calendar birthDate, 
+            String cpf,
             double weight, 
             double height) {
         this.name = name;
         this.cpf = cpf;
-        this.birthDate = birthDate;
         this.weight = weight;
         this.height = height;
     }
@@ -29,13 +24,11 @@ public class Patient {
             Long id, 
             String name, 
             String cpf, 
-            Calendar birthDate, 
             double weight, 
             double height) {
         this.id = id;
         this.name = name;
         this.cpf = cpf;
-        this.birthDate = birthDate;
         this.weight = weight;
         this.height = height;
     }
@@ -63,15 +56,7 @@ public class Patient {
     public void setCpf(String cpf) {
         this.cpf = cpf;
     }
-
-    public Calendar getBirthDate() {
-        return birthDate;
-    }
-
-    public void setBirthDate(Calendar birthDate) {
-        this.birthDate = birthDate;
-    }
-
+    
     public double getWeight() {
         return weight;
     }
