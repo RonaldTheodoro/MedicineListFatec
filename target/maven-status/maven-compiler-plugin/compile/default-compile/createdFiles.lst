@@ -1,0 +1,8 @@
+com/fatec/medicine/model/dao/MedicineDAO.class
+com/fatec/medicine/model/bean/Doctor.class
+com/fatec/medicine/model/connection/ConnectionFactory.class
+com/fatec/medicine/model/dao/PatientDAO.class
+com/fatec/medicine/model/dao/ConnectionDAO.class
+com/fatec/medicine/model/bean/Medicine.class
+com/fatec/medicine/model/dao/DoctorDAO.class
+com/fatec/medicine/model/bean/Patient.class
