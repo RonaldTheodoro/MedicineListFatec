@@ -20,6 +20,8 @@ public class DoctorDAO extends ConnectionDAO {
             executeStatement();
         } catch (SQLException error) {
             throwRuntimeException(error);
+        } finally {
+            dispose();
         }
     }
     
