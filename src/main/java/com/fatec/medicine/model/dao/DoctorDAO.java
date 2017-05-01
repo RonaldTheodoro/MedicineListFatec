@@ -27,7 +27,7 @@ public class DoctorDAO extends ConnectionDAO {
         }
     }
     
-    public List<Doctor> getListContacts() {
+    public List<Doctor> getListDoctors() {
         String sql = "SELECT * FROM Doctor";
         
         try {
