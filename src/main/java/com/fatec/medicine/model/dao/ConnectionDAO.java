@@ -14,6 +14,14 @@ abstract class ConnectionDAO {
         this.connection = connection;
     }
     
+    protected Long getLong(String value) throws SQLException {
+        return resultSet.getLong(value);
+    }
+    
+    protected String getString(String value) throws SQLException {
+        return resultSet.getString(value);
+    }
+    
     protected void setString(int position, String value) throws SQLException {
         statement.setString(position, value);
     }
