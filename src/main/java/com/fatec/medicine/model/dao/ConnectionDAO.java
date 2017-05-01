@@ -30,13 +30,17 @@ abstract class ConnectionDAO {
         statement.execute();
     }
     
+    protected void throwRuntimeException(SQLException error) {
+        throw new RuntimeException(error);
+    }
+    
     protected void dispose() {
         try {
             closeResultSet();
             closeStatement();
             closeConnection();
         } catch (SQLException error) {
-            throw new RuntimeException(error);
+            throwRuntimeException(error);
         }
     }
     
