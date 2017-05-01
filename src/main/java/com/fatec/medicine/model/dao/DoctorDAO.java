@@ -29,16 +29,18 @@ public class DoctorDAO extends ConnectionDAO {
     
     public List<Doctor> getListDoctors() {
         String sql = "SELECT * FROM Doctor";
+        List<Doctor> doctors = new ArrayList<>();
         
         try {
             prepareStatement(sql);
             query();
-            return getPopulatedList();
+            doctors = getPopulatedList();
         } catch (SQLException error) {
             throwRuntimeException(error);
         } finally {
             dispose();
         }
+        return doctors;
     }
     
     private void populateInsertStatement(Doctor doctor) throws SQLException {
