@@ -18,6 +18,10 @@ abstract class ConnectionDAO {
         statement.setString(position, value);
     }
     
+    protected boolean resultSetNext() throws SQLException {
+        return resultSet.next();
+    }
+    
     protected void populateGetByIdQueryStatement(Long id) throws SQLException {
         statement.setLong(1, id);
     }
