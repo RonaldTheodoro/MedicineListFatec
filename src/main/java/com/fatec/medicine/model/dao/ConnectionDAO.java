@@ -26,6 +26,10 @@ abstract class ConnectionDAO {
         resultSet = statement.executeQuery();
     }
 
+    protected void executeStatement() {
+        statement.execute();
+    }
+    
     protected void dispose() {
         try {
             closeResultSet();
